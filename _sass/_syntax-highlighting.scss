@@ -1,0 +1,37 @@
+// This file defines the syntax highlighting styles for code blocks in the blog.
+.highlight {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.highlight code {
+  color: #c7254e;
+  background: #f9f2f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.highlight .keyword {
+  color: #0086b3;
+  font-weight: bold;
+}
+
+.highlight .string {
+  color: #d14;
+}
+
+.highlight .comment {
+  color: #998;
+  font-style: italic;
+}
+
+.highlight .function {
+  color: #795e26;
+}
+
+.highlight .variable {
+  color: #000;
+}

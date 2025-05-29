@@ -1,0 +1,37 @@
+---
+layout: default
+title: 博客
+---
+
+<div class="blog-page">
+    <header class="page-header">
+        <h1>博客文章</h1>
+        <p>我的思考和分享</p>
+    </header>
+
+    <div class="posts-list">
+        {% for post in site.posts %}
+        <article class="post-preview">
+            <h2 class="post-preview-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <div class="post-preview-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%Y年%m月%d日" }}
+                </time>
+                {% if post.categories %}
+                <span class="post-categories">
+                    {% for category in post.categories %}
+                    <span class="category">{{ category }}</span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+            <div class="post-preview-excerpt">
+                {{ post.excerpt }}
+            </div>
+            <a href="{{ post.url | relative_url }}" class="read-more">阅读全文</a>
+        </article>
+        {% endfor %}
+    </div>
+</div>
