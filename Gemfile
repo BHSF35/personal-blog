@@ -1,14 +1,10 @@
 source "https://rubygems.org"
 
-# Jekyll核心
-gem "jekyll", "~> 4.3.2"
+# 使用GitHub Pages gem，它会自动管理Jekyll和插件版本
+gem "github-pages", group: :jekyll_plugins
 
-# GitHub Pages兼容
-gem "github-pages", "~> 228", group: :jekyll_plugins
-
-# Jekyll插件
+# 额外插件
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
 end
