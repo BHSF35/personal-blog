@@ -1,5 +1,5 @@
 title: BlogWXY
-email: your-email@example.com
+email: fdxxWilliam@outlook.com
 description: >-
   wxy的博客
 baseurl: "/personal-blog"
@@ -12,11 +12,21 @@ author:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Include custom CSS
+include:
+  - assets
 
 # Exclude from processing
 exclude:
@@ -45,3 +55,8 @@ defaults:
     values:
       layout: "post"
       author: "wxy"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
